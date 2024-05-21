@@ -1,0 +1,1 @@
+export const headerNavigations: string[] = ["About","Projects","Skills","Resume"];
