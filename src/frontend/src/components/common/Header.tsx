@@ -23,8 +23,8 @@ function Header(props: IHeaderProps) {
 
   return (
     <nav className="flex items-end justify-between cursor-pointer py-2">
-      <div>
-        <h1 className="font-rubik title__font text-xl font-medium tracking-wider">
+      <div className="app__title">
+        <h1 className="font-rubik title__font text-xl font-bold tracking-wider">
           {appTitle}
           <span className="text-2xl text-orange-600 font-bolder rounded-2xl pl-[2px]">
             .

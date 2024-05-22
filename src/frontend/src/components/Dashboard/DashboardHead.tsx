@@ -1,8 +1,12 @@
 import React from "react";
+import { headerScrollingText } from "../../constants/dashboard";
 
 function DashboardHead() {
-  return <div>DashboardHead</div>;
+  return (
+    <div className="floating__header">
+      <span className="tracking-wide font-medium">{headerScrollingText}</span>
+    </div>
+  );
 }
 
 export default DashboardHead;
-DashboardHead;

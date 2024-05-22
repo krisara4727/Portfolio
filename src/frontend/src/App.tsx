@@ -29,7 +29,7 @@ function App() {
     dispatch(toggleTheme());
   };
   return (
-    <main className="whole__page__container p-4">
+    <main className="whole__page__container p-4 flex flex-col">
       <BrowserRouter>
         <Header handleTheme={handleTheme} theme={themeMode} />
         <Routes>
