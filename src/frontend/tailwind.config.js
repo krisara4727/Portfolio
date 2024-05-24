@@ -11,6 +11,9 @@ export default {
         "2px": "2px",
         "3px": "3px",
       },
+      height: {
+        "920px": "920px",
+      },
     },
   },
   plugins: [],

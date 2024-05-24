@@ -4,7 +4,7 @@ import DashboardFooter from "../../components/Dashboard/DashboardFooter";
 
 function index() {
   return (
-    <div className="pt-4 w-full h-full flex flex-col">
+    <div className="pt-2 md:pt-4 w-full h-full flex flex-col">
       <DashboardHead />
       <DashboardSection />
       <DashboardFooter />

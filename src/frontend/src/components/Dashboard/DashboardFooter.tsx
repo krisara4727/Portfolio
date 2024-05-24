@@ -10,14 +10,11 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 
 function DashboardFooter() {
   const { themeProperties } = useTheme();
-  console.log("themes ing proper", themeProperties.color);
-  useEffect(() => {}, [themeProperties]);
   return (
-    <footer className="footer__svg flex">
+    <footer className="footer__svg flex h-32 md:h-48">
       <div className="flex gap-2 items-end p-4">
         <p className="font-light text-sm flex items-center gap-4">
-          {letsConnect}{" "}
-          <Seperator width="16px" height="1px" color={themeProperties.color} />
+          {letsConnect} <Seperator width="16px" height="1px" />
         </p>
         <div className="z-10 flex gap-4">
           <LinkedInIcon

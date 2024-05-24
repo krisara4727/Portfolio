@@ -6,23 +6,35 @@
   --primary-bg-color: #e91e63;
   --secondary-bg-color: #f09819;
   --bg-color: #ffffff;
+  --bg-color2: #f5f5f5;
   --color: #212529;
-  --glass-bg-color: rgba(255, 255, 255, 0.1);
+  --glass-bg-color: rgba(255, 255, 255, 0.3);
+  --primary-rgba-bg-one: rgba(255, 69, 0, 0.4);
+  --primary-rgba-bg-zero: rgba(255, 69, 0, 0);
+  --secondary-text-color: #666;
 }
 
 [data-theme="dark"] {
-  --primary-bg-color: #ff4500;
+  --primary-bg-color: #e91e63;
   --secondary-bg-color: #f0e68c;
   --bg-color: #212529;
+  --bg-color2: #424242;
   --color: #ffffff;
-  --glass-bg-color: rgba(0, 0, 0, 0.1);
+  --glass-bg-color: rgba(0, 0, 0, 0.3);
+  --primary-rgba-bg-one: rgba(233, 30, 99, 0.4);
+  --primary-rgba-bg-zero: rgba(233, 30, 99, 0);
+  --secondary-text-color: #aaa;
 }
 [data-theme="light"] {
-  --primary-bg-color: #e91e63;
+  --primary-bg-color: #ff4500;
   --secondary-bg-color: #f09819;
+  --bg-color2: #f5f5f5;
   --bg-color: #ffffff;
   --color: #212529;
   --glass-bg-color: rgba(255, 255, 255, 0.1);
+  --primary-rgba-bg-one: rgba(255, 69, 0, 0.4);
+  --primary-rgba-bg-zero: rgba(255, 69, 0, 0);
+  --secondary-text-color: #666;
 }
 
 body {
@@ -70,7 +82,7 @@ body {
 .floating__header span {
   display: inline-block;
   padding-left: 100%;
-  animation: floatingText 10s linear infinite;
+  animation: floatingText 20s linear infinite;
 }
 
 @keyframes floatingText {
@@ -93,22 +105,13 @@ body {
   background-position: center;
 }
 
-.glass__on__image {
-  background: var(--glass-bg-color);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(1.5px);
-  -webkit-backdrop-filter: blur(1.5px);
-  border-radius: 100%;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-}
-
 .my__image__background {
   background-image: url("./assets/krishna-bg.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
-@media (min-width: 1100px) {
+@media (min-width: 1500px) {
   /* Styles for screens wider than 992px (typical desktops) */
   .my__image__background {
     background-size: auto;
@@ -121,7 +124,6 @@ body {
 
 .footer__svg {
   width: 100%;
-  height: 12em;
   background-image: url("./assets/footer.svg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -138,4 +140,39 @@ body {
 
 .social__icons {
   cursor: pointer;
+}
+
+.secondary__header__bars {
+  background: var(--secondary-bg-color);
+}
+
+.custom__underline {
+  background-image: linear-gradient(
+    to right,
+    var(--primary-bg-color),
+    var(--secondary-bg-color)
+  );
+  background-size: 100% 2px;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  padding-bottom: 2px;
+  font-weight: 500;
+}
+
+.glass__background {
+  background: var(--glass-bg-color);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(1.5px);
+  -webkit-backdrop-filter: blur(1.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+@media (max-width: 640px) {
+  /* Styles for screens wider than 992px (typical desktops) */
+  .glass__hover:hover {
+    background: var(--color);
+    color: var(--bg-color);
+    border-radius: 10px;
+  }
 }
