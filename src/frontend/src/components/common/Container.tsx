@@ -6,7 +6,7 @@ interface ContainerProps {
 
 function Container(props: ContainerProps) {
   return (
-    <div className="flex flex-wrap gap-2 container p-2 w-full">
+    <div className="flex flex-wrap gap-2 container__box p-2 w-full">
       {props.children}
     </div>
   );

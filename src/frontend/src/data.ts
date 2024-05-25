@@ -1,3 +1,5 @@
+import { CodingSiteTypes } from "./types/dataTypes";
+
 export const personalData = {
     age: 25,
     experience: "3 Years, 1 Month",
@@ -45,3 +47,159 @@ export const experienceData = [
         description: `Created react components for dashboard.Worked on Image upload, files upload, image/file downloads. Bugs fixes. wrote unit test cases using jest`
     }
 ];
+
+export const skillsData = [
+    {
+        name: "ReactJS",
+        logo: "react",
+        proficiency: "advanced",
+        score: 4.5,
+        experience: "3 Years, 3 Months",
+    },
+    {
+        name: "Javascript",
+        logo: "javascript",
+        proficiency: "advanced",
+        score: 4.5,
+        experience: "3 Years, 3 Months",
+    },
+    {
+        name: "Typescript",
+        logo: "typescript",
+        proficiency: "advanced",
+        score: 4.5,
+        experience: "3 Years",
+    },
+    {
+        name: "Redux",
+        logo: "redux",
+        proficiency: "advanced",
+        score: 4,
+        experience: "2 Years",
+    },
+    {
+        name: "Mobx",
+        logo: "mobx",
+        proficiency: "advanced",
+        score: 4.5,
+        experience: "2 Years",
+    },
+    {
+        name: "HTML5",
+        logo: "html",
+        proficiency: "advanced",
+        score: 4.5,
+        experience: "3 Years, 3 Months",
+    },
+    {
+        name: "CSS",
+        logo: "css",
+        proficiency: "advanced",
+        score: 4.5,
+        experience: "3 Years, 3 Months",
+    },
+    {
+        name: "Github",
+        logo: "github",
+        proficiency: "advanced",
+        score: 4,
+        experience: "3 Years",
+    },
+    {
+        name: "Docker",
+        logo: "docker",
+        proficiency: "intermediate",
+        score: 3.5,
+        experience: "1 year",
+    },
+    {
+        name: "NodeJS",
+        logo: "nodejs",
+        proficiency: "intermediate",
+        score: 3.5,
+        experience: "< 1 Year",
+    },
+    {
+        name: "Express",
+        logo: "express",
+        proficiency: "intermediate",
+        score: 3.5,
+        experience: "< 1 Year",
+    },
+    {
+        name: "SpringBoot",
+        logo: "springboot",
+        proficiency: "begineer",
+        score: 2.5,
+        experience: " < 1 Year",
+    },
+    {
+        name: "TailwindCss",
+        logo: "tailwindcss",
+        proficiency: "advanced",
+        score: 4.5,
+        experience: "3 Years",
+    },
+    {
+        name: "Material UI",
+        logo: "materialui",
+        proficiency: "advanced",
+        score: 4,
+        experience: "1 Years",
+    },
+    {
+        name: "MongoDB",
+        logo: "mongodb",
+        proficiency: "intermediate",
+        score: 3.5,
+        experience: " < 1 Year",
+    },
+    {
+        name: "MySql",
+        logo: "mysql",
+        proficiency: "intermediate",
+        score: 3,
+        experience: " < 1 Year",
+    },
+
+]
+
+export const searchOptions = ["all",'images','videos','shopping','news',':More'];
+export const searchedResults = ['login','answers','sign up','practice problems','certification','contest','compiler'];
+export const codingSiteData: CodingSiteTypes[] =[
+    {
+        name: "codechef",
+        url:"https://www.codechef.com/users/krisara4727",
+        logo:"codechef",
+        title: "CodeChef - Learn and Practice Coding with Problems",
+        description: 'Over 2M Learners · These are the best problems for beginners. · This module is excellent for both learning and practicing, as it provides a clear and in-depth ...',
+    },
+    {
+        name: "hackerRank",
+        url:"https://www.hackerrank.com/profile/chivtekrishna_41",
+        logo:"hackerrank",
+        title: "HackerRank - Online Coding Tests and Technical Interviews",
+        description: "HackerRank is the market-leading coding test and interview solution for hiring developers. Start hiring at the pace of innovation!",
+    }, 
+    {
+        name: "leetcode",
+        url:"https://leetcode.com/lucifer4727/",
+        logo:"leetcode",
+        title:"LeetCode - The World's Leading Online Programming ...",
+        description: "Level up your coding skills and quickly land a job. This is the best place to expand your knowledge and get prepared for your next interview."
+    },
+    {
+        name: "github",
+        url:"https://github.com/krisara4727",
+        logo:"github",
+        title:"GitHub: Let's build from here · GitHub",
+        description: "GitHub is where over 100 million developers shape the future of software, together. Contribute to the open source community, manage your Git repositories, ..."
+    },
+    {
+        name: "linkedIn",
+        url:"https://linkedin.com/in/krishna-chivte-2708b816a",
+        logo:"linkedin",
+        title:"LinkedIn India: Log In or Sign Up",
+        description: "1 billion members | Manage your professional identity. Build and engage with your professional network. Access knowledge, insights and opportunities."
+    },
+]

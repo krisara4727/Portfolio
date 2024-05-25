@@ -5,3 +5,5 @@ export const personalInfo = "Personal Information";
 export const experience = "Experience";
 export const krishnaResume = "Krishna Chivte's Resume.";
 export const techStack = "Tech Stack.";
+export const profiles = "Coding Profiles.";
+export const certificates = "Certificates.";

@@ -1,9 +1,12 @@
 import React from "react";
 import SecondaryHeader from "../components/common/SecondaryHeader";
-import { krishnaResume, resume } from "../constants/about";
+import { certificates, krishnaResume, resume } from "../constants/about";
 import SubHeading from "../components/common/SubHeading";
 import resumeFile from "../assets/files/chivtekrishna_sde-2.pdf";
 import FileDownloadIcon from "@mui/icons-material/FileDownload";
+import DsCert from "../assets/files/DsAlgo-compressed.pdf";
+import MlCert from "../assets/files/MachineLearning-compressed.pdf";
+import HackerrankCert from "../assets/files/hackerrank-compressed.pdf";
 
 function Resume() {
   return (
@@ -15,8 +18,16 @@ function Resume() {
           <FileDownloadIcon fontSize="large" />
         </a>
       </div>
-      <div className="h-full">
-        <embed src={resumeFile} width="100%" className="h-80 md:h-[920px]" />
+      <div className="flex flex-col gap-4 relative">
+        <embed src={resumeFile} width="100%" className="h-80 md:h-[500px]" />
+        <SubHeading personalInfo={certificates} />
+        <embed src={DsCert} width="100%" className="h-80 md:h-[500px] pt-2" />
+        <embed src={MlCert} width="100%" className="h-80 md:h-[500px] pt-2" />
+        <embed
+          src={HackerrankCert}
+          width="100%"
+          className="h-80 md:h-[500px] pt-2"
+        />
       </div>
     </div>
   );
