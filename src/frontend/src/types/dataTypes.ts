@@ -24,3 +24,11 @@ export interface CodingSiteTypes {
     title: string;
     description: string;
 }
+
+export interface ProjectDataType {
+    name: string;
+    image: string;
+    description: string;
+    git: string;
+    hosted: string
+}

@@ -23,9 +23,11 @@ function Skills() {
       <SecondaryHeader name={skills} />
       <SubHeading personalInfo={techStack} />
       <Container>
-        {skillsData.map((skill: SkillDataType) => (
-          <GlassCard skill={skill} />
-        ))}
+        {skillsData
+          .sort((a, b) => b.score - a.score)
+          .map((skill: SkillDataType) => (
+            <GlassCard skill={skill} />
+          ))}
       </Container>
       <SubHeading personalInfo={profiles} />
       <div className="flex flex-col gap-4">

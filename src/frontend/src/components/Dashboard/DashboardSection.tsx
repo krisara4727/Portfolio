@@ -1,6 +1,7 @@
 import React from "react";
 import {
   getInTouchText,
+  myNumber,
   sectionTitle,
   summary,
 } from "../../constants/dashboard";
@@ -15,8 +16,11 @@ function DashboardSection() {
           {sectionTitle}
         </p>
         <p className="pt-2 md:pt-6 font-light text-sm">{summary}</p>
-        <div className="pt-4">
-          <button className="small__button">{getInTouchText}</button>
+        <div className="pt-4 cursor-pointer">
+          <button className="small__button">
+            {" "}
+            <a href={`tel:${myNumber}`}>{getInTouchText}</a>
+          </button>
         </div>
       </div>
       <div

@@ -70,7 +70,9 @@ function Header(props: IHeaderProps) {
     >
       {GetIcon()}
     </div> */}
-        <button className="small__button">{hireText}</button>
+        <button className="small__button">
+          <a href="mailto:chivtekrishna.4727@gmail.com">{hireText}</a>
+        </button>
       </div>
     );
   };

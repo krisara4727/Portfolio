@@ -1,10 +1,14 @@
 import React from "react";
 import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
+import SchoolIcon from "@mui/icons-material/School";
 import Seperator from "./Seperator";
 import { ExperienceDataType } from "../../types/commonTypes";
 import GeekyantsLogo from "../../assets/geekyants.jpeg";
 import KreditbeeLogo from "../../assets/kreditbee_logo.jpeg";
 import KarmalabLogo from "../../assets/karmalabs_logo.jpeg";
+import IiitLogo from "../../assets/svg/iiit.svg";
+import KrishnaveniLogo from "../../assets/images/krhs.jpeg";
+import NarayanaLogo from "../../assets/images/narayana.jpg";
 
 interface StepType {
   data: ExperienceDataType;
@@ -15,6 +19,10 @@ const getImage = (companyName: string) => {
   else if (companyName.toLowerCase().includes("kreditbee"))
     return KreditbeeLogo;
   else if (companyName.toLowerCase().includes("karmalab")) return KarmalabLogo;
+  else if (companyName.toLowerCase().includes("iiit")) return IiitLogo;
+  else if (companyName.toLowerCase().includes("krishnaveni"))
+    return KrishnaveniLogo;
+  else if (companyName.toLowerCase().includes("narayana")) return NarayanaLogo;
 };
 
 function Steps(props: StepType) {
@@ -25,7 +33,7 @@ function Steps(props: StepType) {
       {/* stepui */}
       <div className="flex flex-col items-center step__ui">
         <div className="border rounded-full p-1 seperator__border2 glow">
-          <BusinessCenterIcon />
+          {data.type === "industry" ? <BusinessCenterIcon /> : <SchoolIcon />}
         </div>
         <Seperator width="1px" height="100%" classNames="seperator__border" />
       </div>

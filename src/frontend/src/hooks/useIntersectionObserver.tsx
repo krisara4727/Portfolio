@@ -1,17 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 
 function useIntersectionObserver() {
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        // line.classList.add("animate-line");
-      }
-    });
-  });
+  const [isLastElementIntersecting, setIsLastElementIntersecting] =
+    useState<boolean>(false);
 
-  observer;
-
-  return { observer };
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setIsLastElementIntersecting(true);
+        }
+      });
+    },
+    {
+      threshold: 1,
+    }
+  );
+  return { observer, isLastElementIntersecting, setIsLastElementIntersecting };
 }
 
 export default useIntersectionObserver;
