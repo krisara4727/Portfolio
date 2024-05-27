@@ -1,8 +1,8 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import "./common.css";
 
 function ProgressBar(props: { min: number; max: number; value: number }) {
-  const ref = useRef(null);
+  const ref: any = useRef(null);
   useEffect(() => {
     if (ref.current) {
       const percentage = (props.value / 5) * 100;

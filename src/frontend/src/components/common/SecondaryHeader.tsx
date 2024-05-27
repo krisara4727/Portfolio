@@ -1,4 +1,3 @@
-import React from "react";
 import { SecondaryHeaderTypes } from "../../types/commonTypes";
 import "./common.css";
 

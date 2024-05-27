@@ -1,4 +1,3 @@
-import React from "react";
 import { searchText } from "../../constants/projects";
 import Seperator from "../common/Seperator";
 import Mic from "../../assets/svg/google-mic.svg";

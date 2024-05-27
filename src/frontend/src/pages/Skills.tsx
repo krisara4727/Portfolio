@@ -1,4 +1,3 @@
-import React from "react";
 import SecondaryHeader from "../components/common/SecondaryHeader";
 import { profiles, skills, techStack } from "../constants/about";
 import SubHeading from "../components/common/SubHeading";

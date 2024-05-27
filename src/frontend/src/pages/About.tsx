@@ -1,11 +1,9 @@
-import React from "react";
 import SecondaryHeader from "../components/common/SecondaryHeader";
 import { about, education, experience, personalInfo } from "../constants/about";
 import SubHeading from "../components/common/SubHeading";
 import { educationData, experienceData, personalData } from "../data";
 import InfoCard from "../components/common/InfoCard";
 import Steps from "../components/common/Steps";
-import { ExperienceDataType } from "../types/commonTypes";
 
 function About() {
   return (
@@ -20,8 +18,8 @@ function About() {
         </div>
         <SubHeading personalInfo={experience} />
         <div className="pb-4">
-          {experienceData.map((experience: ExperienceDataType) => (
-            <Steps key={experience.company} data={experience} />
+          {experienceData.map((exper: any) => (
+            <Steps key={exper.company} data={exper} />
           ))}
         </div>
         <SubHeading personalInfo={education} />

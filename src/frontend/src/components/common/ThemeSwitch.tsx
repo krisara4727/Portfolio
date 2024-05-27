@@ -1,4 +1,3 @@
-import React from "react";
 import "./themeSwitch.css";
 import { themeType } from "../../types/themeTypes";
 

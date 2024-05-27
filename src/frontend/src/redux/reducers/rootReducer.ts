@@ -1,6 +1,6 @@
 import themeReducer from "./themeSlice";
 
-const rootReducer = {
+const rootReducer: any = {
     theme: themeReducer,
 };
 

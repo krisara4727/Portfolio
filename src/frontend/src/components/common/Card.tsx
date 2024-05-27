@@ -1,4 +1,3 @@
-import React from "react";
 import { ProjectDataType } from "../../types/dataTypes";
 import DikstraImg from "../../assets/images/dijkstra-min.png";
 import ChainImg from "../../assets/images/chain-reaction-min.png";
@@ -8,7 +7,7 @@ import ResumeImg from "../../assets/images/resume.png";
 
 import "./common.css";
 
-const getImage = {
+const getImage: any = {
   pathfinding: DikstraImg,
   chainreaction: ChainImg,
   password: PassImg,

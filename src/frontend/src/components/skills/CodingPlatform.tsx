@@ -1,4 +1,3 @@
-import React from "react";
 import { CodingSiteTypes } from "../../types/dataTypes";
 import leetLogo from "../../assets/images/leetcode.jpeg";
 import codechefLogo from "../../assets/images/codechef.jpeg";

@@ -1,4 +1,3 @@
-import React from "react";
 import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
 import SchoolIcon from "@mui/icons-material/School";
 import Seperator from "./Seperator";
@@ -9,10 +8,6 @@ import KarmalabLogo from "../../assets/karmalabs_logo.jpeg";
 import IiitLogo from "../../assets/svg/iiit.svg";
 import KrishnaveniLogo from "../../assets/images/krhs.jpeg";
 import NarayanaLogo from "../../assets/images/narayana.jpg";
-
-interface StepType {
-  data: ExperienceDataType;
-}
 
 const getImage = (companyName: string) => {
   if (companyName.toLowerCase().includes("geekyants")) return GeekyantsLogo;
@@ -25,7 +20,7 @@ const getImage = (companyName: string) => {
   else if (companyName.toLowerCase().includes("narayana")) return NarayanaLogo;
 };
 
-function Steps(props: StepType) {
+function Steps(props: { data: ExperienceDataType }) {
   const { data } = props;
 
   return (

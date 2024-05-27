@@ -1,5 +1,3 @@
-import React from "react";
-
 function SearchOptions(props: { item: string; index: number }) {
   const item = props.item;
   const index = props.index;

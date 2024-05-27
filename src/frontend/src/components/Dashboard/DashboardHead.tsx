@@ -1,4 +1,3 @@
-import React from "react";
 import { headerScrollingText } from "../../constants/dashboard";
 
 function DashboardHead() {

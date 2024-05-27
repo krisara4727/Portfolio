@@ -1,12 +1,10 @@
-import React from "react";
-
-function SearchedResults({ item }) {
+function SearchedResults(props: { item: any }) {
   return (
     <p
-      key={item}
+      key={props.item}
       className="capitalize py-2 px-4 border border-gray-500 rounded-3xl whitespace-nowrap"
     >
-      {item}
+      {props.item}
     </p>
   );
 }

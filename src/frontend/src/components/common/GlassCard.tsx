@@ -1,4 +1,3 @@
-import React from "react";
 import "./common.css";
 import ReactLogo from "../../assets/svg/react.svg";
 import JavascriptLogo from "../../assets/svg/javascript.svg";
@@ -21,7 +20,7 @@ import ProgressBar from "./ProgressBar";
 import Tag from "./Tag";
 
 function GlassCard(props: { skill: SkillDataType }) {
-  const getLogo = {
+  const getLogo: any = {
     react: ReactLogo,
     javascript: JavascriptLogo,
     redux: ReduxLogo,

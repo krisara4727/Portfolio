@@ -1,4 +1,3 @@
-import React from "react";
 import { projects } from "../constants/projects";
 import SecondaryHeader from "../components/common/SecondaryHeader";
 import ImageCarousel from "../components/common/ImageCarousel";

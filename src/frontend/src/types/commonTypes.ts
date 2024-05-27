@@ -18,5 +18,6 @@ export interface ExperienceDataType {
     timePeriod: string;
     description: string;
     location: string;
-    type: "school" | "industry"
+    // type: "school" | "industry"
+    type: string;
 }
