@@ -1,0 +1,1 @@
+const s="About",e="Skills",t="Resume",a="Personal Information",o="Experience",c="Education & Qualification.",n="Krishna Chivte's Resume.",i="Tech Stack.",r="Coding Profiles.",l="Certificates.";export{s as a,c as b,r as c,l as d,o as e,n as k,a as p,t as r,e as s,i as t};
