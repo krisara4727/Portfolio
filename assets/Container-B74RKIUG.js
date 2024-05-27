@@ -1,0 +1,1 @@
+import{j as r}from"./index-CtfEnrxe.js";const o="Projects",t="Coding Platforms";function n(s){return r.jsx("div",{className:"flex flex-wrap gap-2 container__box p-2 w-full",children:s.children})}export{n as C,o as p,t as s};
