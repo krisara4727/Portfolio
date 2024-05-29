@@ -1,3 +1,5 @@
+import { ExperienceDataType } from "./commonTypes";
+
 export interface PersonalDataType {
     age: number;
     experience: string;
@@ -7,6 +9,8 @@ export interface PersonalDataType {
     city: string;
     phone: number;
     email: string;
+    experienceData: ExperienceDataType[];
+    education: ExperienceDataType[];
 }
 
 export interface SkillDataType {

@@ -19,5 +19,5 @@ export interface ExperienceDataType {
     description: string;
     location: string;
     // type: "school" | "industry"
-    type: string;
+    type?: string;
 }

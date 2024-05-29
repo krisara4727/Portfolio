@@ -20,12 +20,12 @@ function Card(props: { data: ProjectDataType }) {
 
   return (
     <div className="px-4 py-2 flex-1">
-      <div className="flex flex-col gap-2 rounded-lg min-w-44 h-fit md:min-w-60 card glass__background relative">
-        <div className="flex">
+      <div className="flex flex-col gap-2 rounded-lg min-w-44 h-fit md:w-60 card glass__background relative">
+        <div className="flex justify-center m-0 p-0">
           <img
             src={getImage[data.image]}
             alt="image"
-            className="w-full h-60 rounded-lg object-cover"
+            className="w-60 h-60 rounded-lg object-cover"
           />
         </div>
         <h3 className="p-1 pl-2 font-medium text-lg">{data.name}</h3>

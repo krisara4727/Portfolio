@@ -1,6 +1,6 @@
-import { CodingSiteTypes } from "./types/dataTypes";
+import { CodingSiteTypes, PersonalDataType } from "./types/dataTypes";
 
-export const personalData = {
+export const personalData:PersonalDataType = {
     age: 25,
     experience: "3 Years, 1 Month",
     degree: "Bachelor of Technology",
@@ -8,7 +8,78 @@ export const personalData = {
     graduation: "2016-2020",
     city: "Adilabad",
     phone: 8790618161,
-    email: "chivtekrishna.4727@gmail.com"
+    email: "chivtekrishna.4727@gmail.com",
+    education: [
+        {
+            company: "IIIT kalyani",
+            designation: "Bachelor of Technology",
+            startDate: "19 Aug 2016",
+            endDate: "may 2020",
+            location: "kalyani, WestBengal, India.",
+            timePeriod: "4 years -- 7.5 CGPA",
+            type: "school",
+            description: "Operating systems and compilers. Machine learning and Artificial Intelligence. Databases and coding languages. Data structures and Algorithms"
+        },
+        {
+            company: "Narayana Institutes",
+            designation: "Intermediate Education",
+            startDate: "June 2014",
+            endDate: "April 2016",
+            location: "Hyderabad, Telangana, India.",
+            timePeriod: "2 years -- 97.1%",
+            type: "school",
+            description: "Mathematics. Physics. Chemistry"
+        },
+        {
+            company: "Krishnaveni Residential High School",
+            designation: "Primary Education(SSC)",
+            startDate: "July 2004",
+            endDate: "may 2014",
+            location: "Adilabad, Telangana, India.",
+            timePeriod: "10 years -- 9.7 GPA",
+            type: "school",
+            description: "Primary level Education. First Language Telugu. Second Language Hindi"
+        }
+    ],
+    experienceData: [
+        {
+            company: "Geekyants pvt ltd.",
+            designation: "Software engineer III",
+            startDate: "01 Dec 2021",
+            endDate: "current",
+            location: "Bangalore, India.",
+            timePeriod: "2 years 6 months",
+            type: "industry",
+            description: `Enhanced developer productivity by creating custom widgets within Appsmith. Established authorization and authentication to secure data and access control.
+            Integrated SignalR and DevExpress for real-time communication and data visualization. Cross-frame communication between iframes and parent/child windows.
+            Built an application from scratch and developed strategies to scale it seamlessly.
+            Contributed to UI/UX discussions and implemented 12+ reusable components.
+            Improved application performance and load times through advanced optimisation techniques like event delegation, code splitting, lazy loading and memoization. Used Figma to refer component design.Used azuredevops as a project management tool`,
+        },
+        {
+            company: "Kreditbee",
+            designation: "Software engineer",
+            startDate: "03 Mar 2021",
+            endDate: "10 Oct 2021",
+            timePeriod: "8 months",
+            location: "Bangalore, India.",
+            type: "industry",
+            description: `Implemented UI elements and handled data flow for the front-end application. Created reusable React components for improved code maintainability.
+            Implemented unit and integration tests for both backend and front end components, ensuring code quality and maintainability. Wrote test in Cypress, jest and yaml.Used Redux, redux-saga for state management.
+            Exposed to golang, Aws Jira.
+            Leveraged code splitting (eg, ReactLazy) to optimize bundle sizes and load only necessary components on demand, resulting in faster initial page load`,
+        },
+        {
+            company: "Karmalabs",
+            designation: "Developer Intern",
+            startDate: "01 Jan 2021",
+            endDate: "03 Mar 2021",
+            timePeriod: "2 months",
+            location: "Bangalore, India.",
+            type: "industry",
+            description: `Created react components for dashboard.Worked on Image upload, files upload, image/file downloads. Bugs fixes. wrote unit test cases using jest`
+        }
+    ]
 }
 
 export const educationData = [
@@ -246,7 +317,7 @@ export const projectsData = [
         image: "pathfinding",
         description: `The project find distance between two points using dikstra(shortest path) and depth-first search algorithms.`,
         git: 'https://github.com/krisara4727/pathfinding-dijkstra-and-dfs-',
-        hosted: ""
+        hosted: "https://krisara4727.github.io/pathfinding-dijkstra-and-dfs-/"
     },
     {
         name: "Chain Reaction Game.",
