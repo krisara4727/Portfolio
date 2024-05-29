@@ -8,6 +8,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { requestAboutData } from "../redux/reducers/portfolioReducer";
 import { RootState } from "../store";
 import { ExperienceDataType } from "../types/commonTypes";
+import Loader from "../components/common/Loader";
 
 function About() {
   const dispatch = useDispatch();
@@ -15,6 +16,7 @@ function About() {
   const personalData = useSelector(
     (state: RootState) => state.portfolio.personalData
   );
+  const loading = useSelector((state: RootState) => state.portfolio.loading);
 
   useEffect(() => {
     if (firstRendering.current) {
@@ -22,6 +24,8 @@ function About() {
       firstRendering.current = false;
     }
   }, []);
+
+  if (loading) return <Loader />;
 
   return (
     <div className="flex flex-col gap-6 w-full h-full">
