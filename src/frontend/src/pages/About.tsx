@@ -25,6 +25,8 @@ function About() {
     }
   }, []);
 
+  console.log("[erpsm;a ", Object.entries(personalData));
+
   if (loading) return <Loader />;
 
   return (
@@ -33,8 +35,8 @@ function About() {
       <div className="flex flex-col gap-8">
         <SubHeading personalInfo={personalInfo} />
         <div className="w-full grid grid-cols-1 place-content-center gap-4 justify-items-center md:grid-cols-2">
-          {Object.entries(personalData)?.map((item: any) =>
-            typeof item !== "object" ? (
+          {Object.entries(personalData).map((item: any) =>
+            typeof item[1] !== "object" ? (
               <InfoCard key={item} item={item}></InfoCard>
             ) : (
               <></>
