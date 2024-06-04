@@ -1,6 +1,6 @@
 import { call, put, takeLatest } from "redux-saga/effects";
 import axiosInstance from "../../api/axios";
-import { aboutUrl, projectUrl, skillsUrl } from "../../api/urls";
+import { aboutUrl, filesUrl, projectUrl, skillsUrl } from "../../api/urls";
 import {
   failedAboutData,
   getAboutData,
@@ -16,6 +16,11 @@ import {
   getProjectsData,
   requestProjectsData,
 } from "../reducers/projectSlice";
+import {
+  failureFilesData,
+  getFilesData,
+  requestFilesData,
+} from "../reducers/filesSlice";
 
 function* handleGetAboutData(): any {
   try {
@@ -44,10 +49,20 @@ function* handleGetProjectsData(): any {
   }
 }
 
+function* handleGetFilesData(): any {
+  try {
+    const data: any = yield call(axiosInstance.get, filesUrl);
+    yield put(getFilesData(data));
+  } catch (err: any) {
+    yield put(failureFilesData(err.message));
+  }
+}
+
 function* watchAboutData() {
   yield takeLatest(requestAboutData.type, handleGetAboutData);
   yield takeLatest(requestSkillData.type, handleGetSkillsData);
   yield takeLatest(requestProjectsData.type, handleGetProjectsData);
+  yield takeLatest(requestFilesData.type, handleGetFilesData);
 }
 
 export default watchAboutData;

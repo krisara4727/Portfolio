@@ -21,7 +21,6 @@ function Projects() {
   const { data, loading, error } = useSelector(
     (state: RootState) => state.projects
   );
-  console.log("data ", data);
   useEffect(() => {
     if (firstRendering.current) {
       if (!data) dispatch(requestProjectsData());
@@ -35,7 +34,7 @@ function Projects() {
   return (
     <div className="flex flex-col gap-6">
       <SecondaryHeader name={projects} />
-      <ImageCarousel data={projectsData} />
+      {data && <ImageCarousel data={data} />}
       <SubHeading personalInfo={projects} />
       <Container>
         {data?.map((project: ProjectDataType) => (

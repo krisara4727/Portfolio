@@ -1,3 +1,4 @@
+import filesSlice from "./filesSlice";
 import portfolioReducer from "./portfolioReducer";
 import projectSlice from "./projectSlice";
 import skillSlice from "./skillSlice";
@@ -8,6 +9,7 @@ const rootReducer: any = {
   portfolio: portfolioReducer,
   skills: skillSlice,
   projects: projectSlice,
+  files: filesSlice,
 };
 
 export default rootReducer;

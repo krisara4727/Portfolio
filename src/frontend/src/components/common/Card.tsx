@@ -1,20 +1,7 @@
 import { ProjectDataType } from "../../types/dataTypes";
-import DikstraImg from "../../assets/images/dijkstra-min.png";
-import ChainImg from "../../assets/images/chain-reaction-min.png";
-import PassImg from "../../assets/images/generate-pass-min.png";
-import TicTacImg from "../../assets/images/tic-tac-toe-min.png";
-import ResumeImg from "../../assets/images/resume.png";
 
 import "./common.css";
 import { getImageFromBuffer } from "../../utils/skillsUtils";
-
-const getImage: any = {
-  pathfinding: DikstraImg,
-  chainreaction: ChainImg,
-  password: PassImg,
-  tictactoe: TicTacImg,
-  resume: ResumeImg,
-};
 
 function Card(props: { data: ProjectDataType }) {
   const { data } = props;

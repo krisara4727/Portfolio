@@ -3,7 +3,7 @@ const connectDB = require("./config/db");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const aboutRoutes = require("./routes/about");
-// const fileRoutes = require('./routes/files');
+const fileRoutes = require("./routes/file");
 const skillRoutes = require("./routes/skills");
 const projectRoutes = require("./routes/project");
 
@@ -19,7 +19,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // Routes
 app.use("/api/about", aboutRoutes);
-// app.use('/api/files', fileRoutes);
+app.use("/api/files", fileRoutes);
 app.use("/api/skills", skillRoutes);
 app.use("/api/projects", projectRoutes);
 

@@ -1,20 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
-import useIntersectionObserver from "../../hooks/useIntersectionObserver";
+
 import WestIcon from "@mui/icons-material/West";
 import EastIcon from "@mui/icons-material/East";
-import DikstraImg from "../../assets/images/dijkstra-min.png";
-import ChainImg from "../../assets/images/chain-reaction-min.png";
-import PassImg from "../../assets/images/generate-pass-min.png";
-import TicTacImg from "../../assets/images/tic-tac-toe-min.png";
-import ResumeImg from "../../assets/images/resume.png";
 
-const getImage: any = {
-  pathfinding: DikstraImg,
-  chainreaction: ChainImg,
-  password: PassImg,
-  tictactoe: TicTacImg,
-  resume: ResumeImg,
-};
+import { getImageFromBuffer } from "../../utils/skillsUtils";
+import useIntersectionObserver from "../../hooks/useIntersectionObserver";
 
 const ImageCarousel: React.FC<any> = ({ data }) => {
   const images = data.map((item: any) => item.image);
@@ -67,10 +57,10 @@ const ImageCarousel: React.FC<any> = ({ data }) => {
           }%)`,
         }}
       >
-        {images.map((image: string | undefined, index: number) => (
+        {images.map((image: any, index: number) => (
           <div className="flex-shrink-0 hover:scale-110" key={index}>
             <img
-              src={getImage[image + ""]}
+              src={getImageFromBuffer(image)}
               alt={`Slide ${index + 1}`}
               className="w-24 h-24 md:w-56 md:h-48 rounded-2xl shadow-lg"
               ref={(picture) => (refs.current[index] = picture)}
