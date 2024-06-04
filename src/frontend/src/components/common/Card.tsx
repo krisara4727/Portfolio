@@ -6,6 +6,7 @@ import TicTacImg from "../../assets/images/tic-tac-toe-min.png";
 import ResumeImg from "../../assets/images/resume.png";
 
 import "./common.css";
+import { getImageFromBuffer } from "../../utils/skillsUtils";
 
 const getImage: any = {
   pathfinding: DikstraImg,
@@ -23,7 +24,7 @@ function Card(props: { data: ProjectDataType }) {
       <div className="flex flex-col gap-2 rounded-lg min-w-44 h-fit md:w-60 card glass__background relative">
         <div className="flex justify-center m-0 p-0">
           <img
-            src={getImage[data.image]}
+            src={getImageFromBuffer(props.data.image)}
             alt="image"
             className="w-full h-60 rounded-lg object-cover"
           />

@@ -3,9 +3,9 @@ import { PersonalDataType } from "../../types/dataTypes";
 import { RootState } from "../../store";
 
 interface PortfolioInitialState {
-    personalData: PersonalDataType
-    loading: boolean;
-    error: string;
+  personalData: PersonalDataType;
+  loading: boolean;
+  error: string;
 }
 
 const initialState: PortfolioInitialState = {
@@ -47,25 +47,26 @@ const initialState: PortfolioInitialState = {
   error: "",
 };
 
-const portfolioSlice = createSlice({
+const portfolioSlice: any = createSlice({
   name: "portfolio",
   initialState: initialState,
   reducers: {
-    requestAboutData: (state:RootState) => {
-        state.loading = true;
+    requestAboutData: (state: RootState): any => {
+      state.loading = true;
     },
-    getAboutData: (state: RootState, action) => {
-        state.loading = false;
-        if(Array.isArray(action.payload?.data) && action.payload.data.length)
+    getAboutData: (state: RootState, action): any => {
+      state.loading = false;
+      if (Array.isArray(action.payload?.data) && action.payload.data.length)
         state.personalData = action.payload.data[0];
     },
-    failedAboutData: (state: RootState, action) => {
-        state.loading = false;
-        state.error = action.payload;
-    }
+    failedAboutData: (state: RootState, action): any => {
+      state.loading = false;
+      state.error = action.payload;
+    },
   },
 });
 
-export type PortfolioReducer = typeof portfolioSlice.reducer;
-export const {getAboutData, requestAboutData, failedAboutData} = portfolioSlice.actions;
+export type PortfolioReducerType = typeof portfolioSlice.reducer;
+export const { getAboutData, requestAboutData, failedAboutData } =
+  portfolioSlice.actions;
 export default portfolioSlice.reducer;

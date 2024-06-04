@@ -11,7 +11,7 @@ function GlassCard(props: { skill: SkillDataType }) {
       <div className="flex gap-2">
         <div className="skill_img__container">
           <img
-            src={getImageFromBuffer(props.skill)}
+            src={getImageFromBuffer(props.skill.logo)}
             alt={"Image Logo"}
             className="w-8 h-8"
           />

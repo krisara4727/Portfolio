@@ -1,21 +1,23 @@
-import SecondaryHeader from "../components/common/SecondaryHeader";
-import { profiles, skills, techStack } from "../constants/about";
-import SubHeading from "../components/common/SubHeading";
+import React, { useEffect, useRef } from "react";
+
+import { useDispatch, useSelector } from "react-redux";
+
+import { RootState } from "../store";
+import Loader from "../components/common/Loader";
+import { SkillDataType } from "../types/dataTypes";
 import Container from "../components/common/Container";
 import GlassCard from "../components/common/GlassCard";
-import { codingSiteData, searchOptions, searchedResults } from "../data";
-import { SkillDataType } from "../types/dataTypes";
-import SearchComponent from "../components/skills/SearchComponent";
-import "../components/common/common.css";
+import SubHeading from "../components/common/SubHeading";
 import SearchOptions from "../components/skills/SearchOptions";
-import SearchedResults from "../components/skills/SearchedResults";
-import CodingPlatform from "../components/skills/CodingPlatform";
-import React, { useEffect, useRef } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "../store";
 import { requestSkillData } from "../redux/reducers/skillSlice";
-// import NotFound from "../components/common/NotFound";
-import Loader from "../components/common/Loader";
+import { profiles, skills, techStack } from "../constants/about";
+import CodingPlatform from "../components/skills/CodingPlatform";
+import SecondaryHeader from "../components/common/SecondaryHeader";
+import SearchComponent from "../components/skills/SearchComponent";
+import SearchedResults from "../components/skills/SearchedResults";
+import { codingSiteData, searchedResults, searchOptions } from "../data";
+
+import "../components/common/common.css";
 
 function Skills() {
   const dispatch = useDispatch();

@@ -7,26 +7,26 @@ const initialState = {
   data: null,
 };
 
-const skillSlice = createSlice({
-  name: "skills",
+const projectSlice = createSlice({
+  name: "projects",
   initialState: initialState,
   reducers: {
-    requestSkillData: (state: RootState) => {
+    requestProjectsData: (state: RootState) => {
       state.loading = true;
     },
-    getSkillsData: (state: RootState, action) => {
+    getProjectsData: (state: RootState, action) => {
       state.loading = false;
       if (Array.isArray(action.payload?.data) && action.payload.data.length)
         state.data = action.payload.data;
     },
-    failedSkillsData: (state: RootState, action) => {
+    failedProjectsData: (state: RootState, action) => {
       state.loading = false;
       state.error = action.payload;
     },
   },
 });
 
-export type SkillsReducer = typeof skillSlice.reducer;
-export const { requestSkillData, getSkillsData, failedSkillsData } =
-  skillSlice.actions;
-export default skillSlice.reducer;
+export type SkillsReducer = typeof projectSlice.reducer;
+export const { requestProjectsData, getProjectsData, failedProjectsData } =
+  projectSlice.actions;
+export default projectSlice.reducer;
