@@ -7,3 +7,4 @@ export const linkedInLink = "https://www.linkedin.com/in/krishna-chivte-2708b816
 export const instagramLink = "https://www.instagram.com/_kistu_19?igsh=MXY0a3pqbWZnbjlscw%3D%3D&utm_source=qr";
 export const gitLink = "https://github.com/krisara4727";
 export const myNumber = "+918790418161";
+export const noData = "No data.";

@@ -18,7 +18,6 @@ const getImage: any = {
 
 const ImageCarousel: React.FC<any> = ({ data }) => {
   const images = data.map((item: any) => item.image);
-  console.log("images", images);
   const { observer, isLastElementIntersecting, setIsLastElementIntersecting } =
     useIntersectionObserver();
   const refs: any = useRef([]);

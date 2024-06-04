@@ -9,6 +9,7 @@ import { requestAboutData } from "../redux/reducers/portfolioReducer";
 import { RootState } from "../store";
 import { ExperienceDataType } from "../types/commonTypes";
 import Loader from "../components/common/Loader";
+import NotFound from "../components/common/NotFound";
 
 function About() {
   const dispatch = useDispatch();
@@ -17,7 +18,7 @@ function About() {
     (state: RootState) => state.portfolio.personalData
   );
   const loading = useSelector((state: RootState) => state.portfolio.loading);
-
+  const error = useSelector((state: RootState) => state.portfolio.error);
   useEffect(() => {
     if (firstRendering.current) {
       if (!(personalData && personalData.email)) dispatch(requestAboutData());
@@ -25,9 +26,8 @@ function About() {
     }
   }, []);
 
-  console.log("[erpsm;a ", Object.entries(personalData));
-
   if (loading) return <Loader />;
+  if (error) return <NotFound />;
 
   return (
     <div className="flex flex-col gap-6 w-full h-full">

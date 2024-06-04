@@ -21,3 +21,9 @@ export interface ExperienceDataType {
     // type: "school" | "industry"
     type?: string;
 }
+
+export interface ErrorPageType {
+    type: ErrorTypes;
+  }
+
+export type ErrorTypes = 400 | 500 | 404;

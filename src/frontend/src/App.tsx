@@ -17,6 +17,7 @@ import { toggleTheme } from "./redux/reducers/themeSlice";
 
 import "./App.css";
 import Loader from "./components/common/Loader";
+import ErrorPage from "./pages/ErrorPage";
 
 const About = lazy(() => import("./pages/About"));
 const Dashboard = lazy(() => import("./pages/dashboard"));
@@ -51,6 +52,7 @@ function App() {
             <Route path={skillsUrl} element={<Skills />}></Route>
             <Route path={projectsUrl} element={<Projects />}></Route>
             <Route path={resumeUrl} element={<Resume />}></Route>
+            <Route path="*" element={<ErrorPage type={404} />} />
           </Routes>
         </Suspense>
       </BrowserRouter>

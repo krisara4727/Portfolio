@@ -25,7 +25,7 @@ function Card(props: { data: ProjectDataType }) {
           <img
             src={getImage[data.image]}
             alt="image"
-            className="w-60 h-60 rounded-lg object-cover"
+            className="w-full h-60 rounded-lg object-cover"
           />
         </div>
         <h3 className="p-1 pl-2 font-medium text-lg">{data.name}</h3>

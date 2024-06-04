@@ -1,3 +1,4 @@
+import { excludeFromPeronalData } from "../../constants/about";
 import "./common.css";
 import ContentCopyIcon from "@mui/icons-material/ContentCopy";
 
@@ -21,22 +22,29 @@ const handleClipboardCopy = (e: any, text: string) => {
   removeColorApplied(e);
 };
 
+const checkForOtherThanPersonalInfo = (key: string) => {
+  return !(
+    excludeFromPeronalData.includes(key) || excludeFromPeronalData.includes(key)
+  );
+};
+
 function InfoCard(props: InfoCardType) {
   const { item }: any = props;
   return (
-    <div className="w-full text-end text-sm md:text-base info__card max-h-fit relative p-1 pr-4">
-      {item[1]}{" "}
-      {checkForMailAOrNumber(item[0]) && (
-        <span
-          className="px-1 cursor-pointer"
-          onClick={(e) => handleClipboardCopy(e, item[1])}
-        >
-          <ContentCopyIcon />
-        </span>
-      )}
-      <span></span>
-      <span className="triangle">{item[0]}</span>
-    </div>
+    checkForOtherThanPersonalInfo(item[0]) && (
+      <div className="w-full text-end text-sm md:text-base info__card max-h-fit relative p-1 pr-4">
+        {item[1]}{" "}
+        {checkForMailAOrNumber(item[0]) && (
+          <span
+            className="px-1 cursor-pointer"
+            onClick={(e) => handleClipboardCopy(e, item[1])}
+          >
+            <ContentCopyIcon />
+          </span>
+        )}
+        <span className="triangle">{item[0]}</span>
+      </div>
+    )
   );
 }
 

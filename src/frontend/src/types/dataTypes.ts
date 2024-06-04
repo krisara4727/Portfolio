@@ -18,7 +18,7 @@ export interface SkillDataType {
     proficiency: string;
     score: number;
     experience: string;
-    logo: string;
+    logo: any;
 }
 
 export interface CodingSiteTypes {

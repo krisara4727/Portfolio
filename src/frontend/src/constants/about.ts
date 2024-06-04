@@ -8,3 +8,5 @@ export const krishnaResume = "Krishna Chivte's Resume.";
 export const techStack = "Tech Stack.";
 export const profiles = "Coding Profiles.";
 export const certificates = "Certificates.";
+
+export const excludeFromPeronalData = ["_id","__v"];

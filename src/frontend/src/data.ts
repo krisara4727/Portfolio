@@ -265,7 +265,7 @@ export const skillsData = [
         name: "MySql",
         logo: "mysql",
         proficiency: "intermediate",
-        score: 3,
+        score: 2.5,
         experience: " < 1 Year",
     },
 

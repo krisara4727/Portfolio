@@ -6,7 +6,7 @@ import watchAboutData from "./portfolioSaga";
 function* rootSaga() {
     yield all([
         takeLatest(TOGGLE_THEME, handleToggleTheme),
-        watchAboutData()
+        watchAboutData(),
     ])
 }
 

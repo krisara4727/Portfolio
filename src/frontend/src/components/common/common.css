@@ -196,8 +196,8 @@
     to bottom,
     #ff9a9e 0%,
     #fad0c4 49%,
-    var(--bg-color2) 50%,
-    var(--bg-color2) 100%
+    transparent 50%,
+    transparent 100%
   );
 }
 
